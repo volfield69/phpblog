@@ -1,0 +1,41 @@
+@mixin horizontalGradient($left, $right) {
+  background: #212322;/* Old Browsers */
+  background: -moz-linear-gradient(left, $left 0%, $right 100%); /* FF3.6+ */
+  background: -webkit-gradient(left top, right top, color-stop(0%, $left), color-stop(100%, $right));/* Chrome, Safari4+ */
+  background: -webkit-linear-gradient(left, $left 0%, $right 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, $left 0%, $right 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, $left 0%, $right 100%); /* IE 10+ */
+  background: linear-gradient(to right, $left 0%, $right 100%);/* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$left, endColorstr=$right, GradientType=1 );/* IE6-9 */
+}
+
+@mixin verticalGradient($top, $bottom) {
+  background: $bottom;
+  background: -moz-linear-gradient(left top, $top 0%, $bottom 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom));
+  background: -webkit-linear-gradient(top, $top 0%, $bottom 100%);
+  background: -o-linear-gradient(top, $top 0%, $bottom 100%);
+  background: -ms-linear-gradient(top, $top 0%, $bottom 100%);
+  background: linear-gradient(to bottom, $top 0%, $bottom 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$top, endColorstr=$bottom, GradientType=0 );
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@mixin horizontal-blue-gradient {
+  @include horizontalGradient($dark-blue, $blue);
+}
+
+@mixin vertical-blue-gradient {
+  @include verticalGradient($dark-blue, $blue);
+}
+
+@mixin borderBottom($color) {
+  border-bottom: 1px solid darken($color, 5) !important;
+}
+
+@mixin bgColor($color) {
+  background-color: $color;
+}

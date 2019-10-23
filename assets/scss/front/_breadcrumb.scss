@@ -1,0 +1,111 @@
+.breadcrumb-bar {
+  display: flex;
+  box-sizing: content-box;
+  overflow: hidden;
+  margin: 2.5rem -15px 0 -15px;
+  text-align: center;
+  top: 50%;
+  width: auto;
+  height: $base * 1.5;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-color: $white;
+  border: 3px solid $blue;
+}
+
+.breadcrumb-bar a {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  text-decoration: none;
+  margin: auto;
+  height: 100%;
+  width: 25%;
+  padding-left: $base;
+  padding-right: 0;
+  color: $gray-font;
+}
+
+.breadcrumb-bar a:first-child {
+  padding-left: $base / 2.5;
+}
+
+.breadcrumb-bar a:last-child {
+  padding-right: $base / 2.5;
+}
+
+.breadcrumb-bar a:after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: $base * 1.6;
+  height: $base * 1.6;
+  top: -2px;
+  right: $base / 1.35 * -1;
+  background-color: #ffffff;
+  transform: scale(0.707) rotate(45deg);
+  box-shadow: 5px -4px $blue;
+  z-index: 1;
+}
+
+.breadcrumb-bar a:last-child:after {
+  content: none;
+}
+
+.breadcrumb__inner {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  z-index: 2;
+}
+
+.breadcrumb__title {
+  font-weight: bold;
+}
+
+.breadcrumb-bar a.active, .breadcrumb-bar a:hover{
+  background: $blue;
+  color: #ffffff;
+}
+
+.breadcrumb-bar a.active:after, .breadcrumb-bar a:hover:after {
+  background: $blue;
+  color: #ffffff;
+}
+
+.breadcrumb-bar a.inactive {
+  pointer-events: none;
+  color: lighten($gray-font, 25);
+}
+
+// 1000px
+///////////////////////
+@media all and (max-width: 1000px) {
+  .breadcrumb-bar {
+    font-size: 12px;
+  }
+}
+
+// 710px
+///////////////////////
+@media all and (max-width: 710px) {
+  .breadcrumb__desc {
+    display: none;
+  }
+
+  .breadcrumb-bar {
+    height: $base;
+  }
+
+  .breadcrumb-bar a {
+    padding-left: $base / 1.5;
+  }
+
+  .breadcrumb-bar a:after {
+    content: "";
+    width: $base * 1;
+    height: $base * 1;
+    right: $base / 2 * -1;
+    transform: scale(0.707) rotate(45deg);
+  }
+}

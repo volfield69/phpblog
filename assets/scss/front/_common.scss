@@ -1,0 +1,231 @@
+html, body {
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: $lin;
+}
+
+h1 {
+  padding: 1.5rem 1rem 0 0;
+  font-size: 2rem;
+}
+
+i {
+  margin-right: 1rem;
+}
+
+.top-bar {
+  min-height: 50px;
+  height: 50px;
+  background-color: $blue;
+  color: $white;
+
+  .emprunteur {
+    margin-right: 1rem;
+  }
+
+  i {
+    margin-right: .5rem;
+  }
+
+  .btn-logout {
+    position:absolute;
+    top:0;
+    right:0;
+    padding: inherit;
+    line-height: 2;
+    height: 50px;
+    background-color: $white;
+    color: $blue;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 0;
+
+    &:hover {
+      background: darken($blue, 10);
+      color: $white;
+    }
+  }
+
+  p {
+    position: absolute;
+    right: 220px;
+    top: 12px;
+    font-weight: 600;
+  }
+}
+
+
+footer {
+  width: 100%;
+  background-color: $black;
+  padding: .5rem;
+  margin-top: auto;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+// ===================================== Colonne de gauche ==================================
+.left-clmn {
+  padding-left: 0;
+  color: $gray-font;
+
+  .container-fluid {
+    background-color: $white;
+    box-shadow: 2px 1px 5px #DCDCDC;
+  }
+
+  .logo {
+    background-color: $white;
+    padding: 1rem;
+
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 55%;
+
+      @media screen and (max-width: 1400px) {
+        width: 90% !important;
+      }
+    }
+  }
+
+  .switch-contrat {
+    background-color: $teal;
+    color: $white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 1.3rem;
+    margin: 0 -15px;
+  }
+
+  .nav {
+    margin: 0 -15px;
+
+    a {
+      color: $gray-font;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 1.3rem;
+      border-bottom: 1px solid darken($lin, 2);
+
+      &:hover, &.active {
+        background-color: $lin;
+      }
+    }
+
+  }
+}
+
+// ===================================== Colonne de droite ==================================
+.right-clmn {
+  margin-bottom: 5rem;
+  color: $gray-font;
+
+  .container-fluid {
+    background-color: $white;
+    padding-top: 15px;
+    box-shadow: 2px 1px 5px #DCDCDC;
+    margin-top: 1.5em;
+  }
+
+  h2 {
+    color: $blue;
+    font-size: 1.3rem;
+    letter-spacing: 0.1px;
+    font-weight: 600;
+    margin-bottom: 1.7rem;
+    text-decoration: underline;
+  }
+
+  .etape-homepage {
+    text-align: center;
+
+    .visuel {
+      min-height: 150px;
+
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 70%;
+      }
+    }
+
+    .titre {
+      text-align: center;
+      color: $blue;
+      font-size: 20px;
+      font-weight: 600;
+      border-bottom: 2px solid $blue;
+      margin: 1rem 7rem 1rem 7rem;
+      padding-bottom: 10px;
+    }
+  }
+
+  .visuel-acceptation {
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .msg-acceptation {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 3rem;
+  }
+
+  .recap-cotisations {
+    max-width: 98%;
+    font-size: 18px;
+    color: $gray-font;
+    background-color: $lin;
+    border: 2px solid $blue;
+    border-radius: 5px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem 0 0 0;
+
+    .row {
+      min-height: 4rem;
+
+      &.total {
+        min-height: 60px;
+        height: 60px;
+        font-weight: 700;
+        font-size: 18px;
+        padding: 0 15px;
+        color: $white;
+        margin-top: 1rem;
+
+        .libelle, .montant {
+          background-color: $blue;
+        }
+      }
+    }
+
+    .libelle {
+      text-align: right;
+
+      .ss-titre {
+        font-size: 13px;
+      }
+    }
+
+    .montant {
+      text-align: left;
+      font-weight: 700;
+    }
+  }
+}
+
+.bg-teal {
+  background-color: $teal;
+}

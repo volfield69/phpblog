@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #63bdbf;
+      }
+
+      .cls-2 {
+        fill: #dae1e8;
+      }
+
+      .cls-3 {
+        fill: #ef4136;
+      }
+
+      .cls-4 {
+        fill: #e0a603;
+      }
+
+      .cls-5 {
+        fill: #f9ed32;
+        opacity: 0.39;
+      }
+
+      .cls-6 {
+        fill: #ffec8d;
+        opacity: 0.21;
+      }
+
+      .cls-7 {
+        fill: #b1bec9;
+      }
+
+      .cls-8 {
+        fill: #a7a9ac;
+      }
+
+      .cls-9 {
+        filter: url(#Tracé_2621);
+      }
+    </style>
+    <filter id="Tracé_2621" x="19.347" y="12.439" width="41.821" height="52.424" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Groupe_891" data-name="Groupe 891" transform="translate(-212.576 -1144)">
+    <circle id="Ellipse_128" data-name="Ellipse 128" class="cls-1" cx="40" cy="40" r="40" transform="translate(212.576 1144)"/>
+    <g id="Groupe_890" data-name="Groupe 890" transform="translate(236.423 1159.939)">
+      <g class="cls-9" transform="matrix(1, 0, 0, 1, -23.85, -15.94)">
+        <path id="Tracé_2621-2" data-name="Tracé 2621" class="cls-2" d="M185.619,142.5l0,0h25.434v43.424H178.235V150.182C178.736,150.166,184.782,143.867,185.619,142.5Z" transform="translate(-154.39 -126.56)"/>
+      </g>
+      <g id="Groupe_889" data-name="Groupe 889" transform="translate(21.506 33.281)">
+        <path id="Tracé_2622" data-name="Tracé 2622" class="cls-3" d="M290.849,331.9l-1.619.748-1.62-.748-3.231,7,2.05-.319.99,1.721,1.811-3.924,1.811,3.924.99-1.721,2.05.319Z" transform="translate(-283.91 -325.971)"/>
+        <g id="Groupe_888" data-name="Groupe 888" transform="translate(0 0)">
+          <path id="Tracé_2623" data-name="Tracé 2623" class="cls-4" d="M282.115,308.4a5.148,5.148,0,1,0,5.147-5.15A5.148,5.148,0,0,0,282.115,308.4Z" transform="translate(-282.115 -303.255)"/>
+          <path id="Tracé_2624" data-name="Tracé 2624" class="cls-5" d="M287.459,312.641A4.042,4.042,0,1,0,291.5,308.6,4.043,4.043,0,0,0,287.459,312.641Z" transform="translate(-286.353 -307.492)"/>
+          <path id="Tracé_2625" data-name="Tracé 2625" class="cls-6" d="M289.005,304.848l7.15,7.391a5.146,5.146,0,1,0-7.15-7.391Z" transform="translate(-287.579 -303.255)"/>
+        </g>
+      </g>
+      <path id="Tracé_2626" data-name="Tracé 2626" class="cls-7" d="M185.725,150.284h-7.49l7.479-7.784Z" transform="translate(-178.235 -142.5)"/>
+      <rect id="Rectangle_631" data-name="Rectangle 631" class="cls-4" width="13.549" height="1.262" transform="translate(8.668 6.48)"/>
+      <rect id="Rectangle_632" data-name="Rectangle 632" class="cls-8" width="23.227" height="1.262" transform="translate(4.797 12.539)"/>
+      <rect id="Rectangle_633" data-name="Rectangle 633" class="cls-8" width="23.227" height="1.262" transform="translate(4.797 17.084)"/>
+      <rect id="Rectangle_634" data-name="Rectangle 634" class="cls-8" width="23.227" height="1.262" transform="translate(4.797 21.628)"/>
+      <rect id="Rectangle_635" data-name="Rectangle 635" class="cls-8" width="23.227" height="1.262" transform="translate(4.797 26.172)"/>
+      <rect id="Rectangle_636" data-name="Rectangle 636" class="cls-8" width="23.227" height="1.262" transform="translate(4.797 30.717)"/>
+      <rect id="Rectangle_637" data-name="Rectangle 637" class="cls-8" width="9.341" height="1.262" transform="translate(4.797 36.776)"/>
+    </g>
+  </g>
+</svg>

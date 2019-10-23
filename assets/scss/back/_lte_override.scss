@@ -1,0 +1,45 @@
+.main-header {
+  .sidebar-toggle:before {
+    content: none;
+  }
+}
+
+tbody {
+  .cellule-choisir-action {
+    background: #009FE3;
+    color: white;
+    text-align: center;
+    vertical-align: middle !important;
+  }
+
+  .bouton-choisir-action {
+    color: white !important;
+    display: block !important;
+    box-shadow: none !important;
+  }
+
+  .bouton-choisir-action:hover, .cellule-choisir-action:hover {
+    background-color: #33b2e9;
+  }
+
+
+  .ligne-grissage{
+    background-color: #888888;
+  }
+  .ligne-grissage TD{
+    background-color: #888888;
+  }
+}
+
+.navbar-nav>.user-menu>.dropdown-menu {
+  width: 340px;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header {
+  height: 110px;
+}
+
+.invalid-feedback {
+  color: #dd4b39 !important;
+  padding: 5px;
+}

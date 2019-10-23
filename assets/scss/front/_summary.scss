@@ -1,0 +1,32 @@
+.summary {
+  .card {
+    border-radius: 1px;
+    background-color: $lin;
+    padding-bottom: 2rem;
+    border-color: darken($lin, 5);
+
+    .card-header {
+      background-color: $lin;
+      padding: 2rem 0 1.5rem 0;
+      border-bottom: none;
+
+      h2 {
+        font-size: 1.1rem;
+      }
+    }
+
+    .card-body {
+      table {
+        color: lighten($gray-font, 5);
+        font-weight: 400;
+
+        tr {
+          td {
+            width: 50%;
+            font-size: .9rem;
+          }
+        }
+      }
+    }
+  }
+}

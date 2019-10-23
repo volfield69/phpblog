@@ -1,0 +1,50 @@
+//Fonts
+$font-family-sans-serif: 'Open sans', sans-serif;
+$roboto-font-path: "~mdbootstrap/font/roboto/";
+$image-path : "~mdbootstrap/img";
+
+$base: 38px;
+
+//Colors
+$blue: #209fc6;
+$dark-blue: #092c3f;
+$teal: #63bdbf;
+$lin: #f4f4f4;
+$gray-font: #666666;
+$red: #fc5252;
+$white: #ffffff;
+$black: #343a40;
+
+// Material colors
+$primary-color:        $blue !default;
+$primary-color-dark:   #0d47a1 !default;
+$secondary-color:      #aa66cc !default;
+$secondary-color-dark: #9933cc !default;
+$default-color:        #2bbbad !default;
+$default-color-dark:   #00695c !default;
+$info-color:           #33b5e5 !default;
+$info-color-dark:      #0099cc !default;
+$success-color:        #00c851 !default;
+$success-color-dark:   #007e33 !default;
+$warning-color:        #ffbb33 !default;
+$warning-color-dark:   #ff8800 !default;
+$danger-color:         #ff3547 !default;
+$danger-color-dark:    #cc0000 !default;
+$elegant-color:        #2e2e2e !default;
+$elegant-color-dark:   #212121 !default;
+$stylish-color:        #4b515d !default;
+$stylish-color-dark:   #3e4551 !default;
+$unique-color:         #3f729b !default;
+$unique-color-dark:    #1c2331 !default;
+$special-color:        #37474f !default;
+$special-color-dark:   #263238 !default;
+$white:                #fff;
+$black:                #000;
+$error-color:          $red !default;
+
+$custom-file-text: (
+    en: "Browse",
+    fr: "Parcourir"
+);
+
+

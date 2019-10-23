@@ -1,0 +1,20 @@
+.question{
+  .card{
+    background-color: $lin;
+  }
+
+  .btn-light {
+    background-color: darken($lin, 3);
+    border-color: darken($lin, 6);
+    color: darken($lin, 50);
+
+    &.toggle-handle {
+      background-color: lighten($lin, 6);
+      border:1px solid darken($lin, 12);
+    }
+  }
+
+  .form-group{
+    margin-bottom:0;
+  }
+}

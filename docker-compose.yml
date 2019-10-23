@@ -1,0 +1,87 @@
+version: "2"
+services:
+    web:
+        image: phpblog/php7
+        container_name: phpblog_symfony_1
+        ports:
+            - "8010:80"
+        volumes:
+            - ./:/www
+            - ./docker/volume/conf.d/apache2/site.conf:/etc/apache2/sites-available/000-default.conf
+            - ./docker/volume/conf.d/php7/php.ini:/usr/local/etc/php/conf.d/php.ini
+            - ./docker/volume/log.d/apache2:/var/log/apache2
+            - ./docker/volume/script.d:/home/volfield/script.d
+            - ./docker/volume/script.d/common/bashrc_volfield.sh:/home/volfield/.bashrc
+            - ~/.ssh:/home/volfield/.ssh
+        depends_on:
+            - mysql
+        links:
+            - mysql
+        extends:
+            file: ./docker-compose-dev.yml
+            service: parent
+        environment:
+            MYSQL_DATABASE: phpblog
+            MYSQL_USER: admin
+            MYSQL_PASSWORD: phpblog
+            HOSTNAME: symfony
+            TERM: xterm
+            VISUAL: /usr/bin/vim
+            EDITOR: vim
+            INSTANCE_DIR: /www
+            NAME_SITE: phpblog
+        networks:
+            default:
+                ipv4_address: 172.40.0.13
+
+
+    #Database container
+    mysql:
+        image: phpblog/mysql57
+        container_name: phpblog_mysql_1
+        ports:
+          - "3386:3306"
+        volumes:
+            - ./docker/volume/data.d/mysql:/docker/data.d/mysql
+            - ./docker/volume/script.d/mysql:/docker/script.d/mysql
+        environment:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: phpblog
+          MYSQL_USER: admin
+          MYSQL_PASSWORD: phpblog
+        networks:
+            default:
+                ipv4_address: 172.40.0.12
+
+    #MailDev Container
+    maildev:
+        image: djfarrelly/maildev
+        container_name: phpblog_maildev
+        ports:
+            - 8011:80
+        networks:
+            default:
+                ipv4_address: 172.40.0.11
+
+    #Adminer for simple html interface on DB
+    #Best theme for me (ng9 pepa-linha lucas-sandery)
+    adminer:
+        image: adminer
+        container_name: phpblog_adminer
+        ports:
+            - 8012:8080
+        environment:
+            ADMINER_PLUGINS: 'edit-calendar edit-foreign enum-option json-column struct-comments tables-filter'
+            ADMINER_DESIGN: pepa-linha
+            ADMINER_DEFAULT_SERVER : mysql
+        networks:
+            default:
+                ipv4_address: 172.40.0.10
+
+networks:
+    default:
+        driver: bridge
+        ipam:
+            config:
+                - subnet: 172.40.0.0/16
+                  gateway: 172.40.0.1

@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+{% block title %}Accueil{% endblock %}
+
+
+
+{% block body %}
+    <h1><i class="fas fa-home"></i> Bienvenue sur votre espace personnel</h1>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h2>Votre projet d'assurance de prêt</h2>
+                <p>Bienvenue dans l'espace sécurisé de votre projet d'assurance de prêt.</p>
+                <p>Cet espace va vous guider à travers les étapes de votre dossier d'assurance.</p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-4 etape-homepage">
+                <div class="visuel">
+                    <img src="{{ asset('build/img/front/icons/etape-home-1.svg') }}" alt="">
+                </div>
+                <div class="titre">Etape 1</div>
+                <p>Inter haec Orfitus praefecti potestate<br> regebat urbem aeternam ultra modum<br> delatae dignitatis sese</p>
+            </div>
+            <div class="col-md-4 etape-homepage">
+                <div class="visuel">
+                    <img src="{{ asset('build/img/front/icons/etape-home-2.svg') }}" alt="">
+                </div>
+                <div class="titre">Etape 2</div>
+                <p>Inter haec Orfitus praefecti potestate<br> regebat urbem aeternam ultra modum<br> delatae dignitatis sese</p>
+            </div>
+            <div class="col-md-4 etape-homepage">
+                <div class="visuel">
+                    <img src="{{ asset('build/img/front/icons/etape-home-3.svg') }}" alt="">
+                </div>
+                <div class="titre">Etape 3</div>
+                <p>Inter haec Orfitus praefecti potestate<br> regebat urbem aeternam ultra modum<br> delatae dignitatis sese</p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <a href="" class="btn btn-suivant centered btn-lg shadow-sm"><i class="fas fa-angle-right"></i>Commencer mon dossier</a>
+        </div>
+
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h2>Historique de vos dossiers</h2>
+
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Id Projet</th>
+                        <th>Date de création</th>
+                        <th>Statut</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>ID</td>
+                            <td>DATE</td>
+                            <td>STATUT</td>
+                            <td>
+                                    <a href="" class="btn btn-sm btn-primary"><i class="fas fa-angle-right"></i>Commencer ce dossier</a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

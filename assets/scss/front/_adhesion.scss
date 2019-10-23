@@ -1,0 +1,31 @@
+.adhesion {
+  iframe {
+      border: 0;
+      height: 600px;
+      width: 100% !important;
+  }
+
+  .adhesion_frame_cover {
+    background-color: $white;
+    position: absolute;
+    height: 600px;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    z-index:1;
+
+    h4 {
+      position: relative;
+      top: 50%;
+      margin-top: -50px;
+
+      i {
+        display:inline-block;
+        margin-bottom: 15px;
+        font-size: 1.5em;
+
+      }
+    }
+  }
+}

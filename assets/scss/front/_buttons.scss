@@ -1,0 +1,61 @@
+.btn {
+  border-radius: 2px !important;
+}
+
+.btn-rounded {
+  padding: .75rem 4rem !important;
+  border-radius: 30px !important;
+  font-weight: 700 !important;
+}
+
+.btn-teal {
+  background-color: $teal !important;
+  color: $white !important;
+
+  &:hover {
+    background-color: darken($teal, 10) !important;
+  }
+}
+
+.btn-steps {
+  padding: .75rem 5rem !important;
+  text-transform: uppercase;
+}
+
+.btn-suivant {
+  background-color: $blue;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 1rem 4rem;
+  font-size: 1rem;
+  margin: 2rem auto;
+  border-radius: 2px;
+
+  &:hover {
+    background-color: darken($blue, 10);
+    color: $white;
+  }
+
+  &.right {
+    margin-right: 30px;
+  }
+}
+
+.btn-refused {
+  background-color: $lin;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 1rem 4rem;
+  font-size: 1rem;
+  margin: 2rem auto;
+  border-radius: 2px;
+
+  &:hover {
+    background-color: darken($lin, 5);
+  }
+
+  &.right {
+    margin-right: 30px;
+  }
+}

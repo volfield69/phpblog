@@ -1,0 +1,78 @@
+.security {
+  @include vertical-blue-gradient();
+
+  button:focus {
+    outline: none;
+  }
+
+  .alert {
+    border-radius: 0;
+    border: none;
+    text-align: center;
+
+    
+    &.alert-danger {
+      background-color: $red;
+      color: darken($red, 40);
+    }
+
+    &.alert-success {
+      background-color: $teal;
+      color: darken($teal, 40);
+    }
+  }
+
+  .vertical-center {
+    padding: 10vh 0;
+    display: flex; /* contexte sur le parent */
+    flex-direction: column; /* direction d'affichage verticale */
+    justify-content: center; /* alignement vertical */
+    height: 100vh;
+
+    .card {
+      border: none;
+
+      .btn {
+        border-radius: 0;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      .field-icon {
+        cursor: pointer;
+        float: right;
+        margin-left: -25px;
+        margin-top: -35px;
+        position: relative;
+        z-index: 1000;
+      }
+
+      .login-options {
+        a {
+          text-decoration: underline;
+        }
+      }
+
+      input[type='password'], input[type="text"] {
+        &.is-invalid {
+          background-image: none;
+        }
+      }
+
+      .alert {
+        text-align: center;
+        border: 1px solid $red;
+        border-radius: 3px;
+
+        font-size:0.9rem;
+
+        &.alert-danger {
+          background-color: $white;
+          border-color: $red;
+          color: $red;
+        }
+      }
+    }
+  }
+}
+

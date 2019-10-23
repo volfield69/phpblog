@@ -1,0 +1,95 @@
+options=""
+# > make docker-compose-up
+# Construit tous les conteneurs décrits dans docker-compose.yml
+docker-compose-up: docker-compose-stop
+	docker-compose up -d
+
+# > make docker-compose-start
+# Démarre les conteneurs du projet	
+docker-compose-start: docker-compose-stop
+	docker-compose start
+
+# > make docker-compose-stop
+# Arrête les conteneurs du projet
+docker-compose-stop:
+	docker-compose stop
+	
+# > make docker-stop-all
+# Arrête tous les conteneurs, y compris ceux des autres projets
+docker-stop-all:
+	docker stop $$(docker ps -a -q)
+
+# > make docker-bash name=projet_service_1
+# Lance un bash en tant que root dans un conteneur
+docker-bash:
+	docker exec -i -t -e COLUMNS=200 ${name} bash --login
+
+# > make docker-bash name=projet_service_1
+# Lance un bash dans un conteneur
+
+docker-bash-as-volfield:
+	docker exec -i -u 1000:33 -t -e COLUMNS=200 ${name} bash --login
+
+
+# > make docker-log
+# Affiche les logs de docker-compose
+docker-log:
+	docker-compose logs
+
+# > make docker-list 
+# > make docker-containers-list
+# Liste tous les conteneurs du projet
+docker-list docker-containers-list:
+	docker-compose ps
+
+# > make docker-list-all
+# > make docker-containers-list-all
+# Liste tous les conteneurs du projet
+docker-list-all docker-containers-list-all:
+	docker ps -a
+
+# > make docker-containers-purge
+# Supprime tous les conteneurs du projet
+docker-containers-purge:
+	docker-compose stop
+	docker-compose rm
+
+# > make docker-containers-purge
+# Supprime tous les conteneurs , y compris ceux des autres projets
+docker-containers-purge-all:
+	docker rm -f $$(docker ps -a -q)
+
+# > make docker-images-list
+# Liste les images
+docker-images-list:
+	docker images
+	
+# > make docker-images-clean
+# Supprime les images sans tag
+docker-images-clean:
+	docker rmi `docker images | awk '/<none>/ {print $3}'`
+
+# > make docker-images-purge
+# Supprime toutes les images
+docker-images-purge:
+	docker rmi -f $$(docker images -q)
+
+# > make docker-dns
+# Affiche les noms de domaines des dockers
+docker-dns:
+	cat /etc/dnsmasq.d/docker-*
+
+# > make docker-ip name=projet_service_1
+# Cherche l'ip d'un container
+docker-ip:
+	docker inspect --format '{{.Config.Hostname}} {{.Name}} {{ .NetworkSettings.IPAddress }}' ${name}
+
+# > make docker-ip-all
+# Cherche l'ip de tous les containers
+docker-ip-all:
+	docker inspect --format '{{.Config.Hostname}} {{.Name}} {{ .NetworkSettings.IPAddress }}' $$(docker ps -a -q)
+
+# > make docker-inspect name=projet_service_1
+# Inspect un container
+docker-inspect:
+	docker inspect  ${name}

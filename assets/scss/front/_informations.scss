@@ -1,0 +1,12 @@
+.information {
+  table {
+    color: $gray-font;
+    margin-bottom: 0 !important;
+
+    &.coord-bancaire {
+      td {
+        width:50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Suivi médical - {% block title %}{% endblock %}</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('build/img/front/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('build/img/front/favicon/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('build/img/front/favicon/favicon-16x16.png')}}">
+    <link rel="mask-icon" href="{{asset('build/img/front/favicon/safari-pinned-tab.c4d9e2e2.svg')}}" color="#088eb2">
+    {{ encore_entry_link_tags('auth') }}
+    {% block stylesheets %}{% endblock %}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body class="security">
+{# read and display all flash messages #}
+{% for label, messages in app.flashes %}
+    {% for message in messages %}
+        <div class="col-xs w-100">
+            <div class="alert alert-{{ label }} alert-dismissible">
+                <div class="container">
+                    <div class="col-12">
+                        {{ message }}
+                    </div>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Fermer">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endfor %}
+{% block body %}{% endblock %}
+{{ encore_entry_script_tags('auth') }}
+{% block javascripts %}{% endblock %}
+</body>
+</html>

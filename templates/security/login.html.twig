@@ -1,0 +1,56 @@
+{% extends 'security.html.twig' %}
+
+{% block title %}Se connecter{% endblock %}
+
+{% block body %}
+    <div class="container vertical-center">
+        <div class="col-sm-4 offset-4">
+            <div class="card">
+                <form method="post" class="form-signin">
+                    <div class="text-center mt-4 mb-4">
+                        <h1 class="loginlogo">
+                            <a href="{{ path('default') }}"><img src="{{ asset('build/img/front/avatar.png') }}" class="my-4" alt="Php blog"><span class="text-hide">Php Blog</span></a>
+                        </h1>
+                    </div>
+                    <div class="card-body">
+                        {% if error %}
+                            <div class="alert alert-danger">
+                                {{ error.messageKey|trans(error.messageData, 'security') }}
+                            </div>
+                        {% endif %}
+                        <div class="px-3">
+                            <div class=form-group">
+                                <div class="md-form">
+                                    <input type="email" value="{{ last_username }}" id="email" name="email"  class="form-control" required autofocus>
+                                    <label for="email">Email *</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="md-form">
+                                    <input type="password" name="password" id="password-field" class="form-control" required>
+                                    <label for="password-field">Mot de passe *</label>
+                                    <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                </div>
+                            </div>
+                            <div class="form-group mb-1 mt-5 login-options">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" name="_remember_me" id="remember_me" checked="" value="" class="custom-control-input">
+                                    <label class="custom-control-label" for="remember_me">Se souvenir de moi</label>
+                                </div>
+                                <div class="text-right mt-3">
+                                    <span class="forgot-password">
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block py-3">Se connecter</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

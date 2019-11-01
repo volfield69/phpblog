@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ category_name(category_id()) }} > {{ theme_name(theme_id()) }} > {{ 'lesson.update'|trans }} > {{ lesson_name(lesson.id) }}{% endblock %}
+
+{% block body %}
+    <h1>{{ category_name(category_id()) }} > {{ theme_name(theme_id()) }} > {{ 'lesson.update'|trans }} > {{ lesson_name(lesson.id) }}</h1>
+    <div class="container-fluid">
+
+        {{ include('lesson/_form.html.twig') }}
+
+    </div>
+    <a href="{{ path('lesson_index') }}" class="btn btn-suivant centered btn-lg shadow-sm"><i class="fas fa-angle-right"></i>{{ 'base.back'|trans }}</a>
+{% endblock %}

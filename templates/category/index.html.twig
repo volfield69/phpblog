@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'category.list'|trans }}{% endblock %}
+
+{% block body %}
+    <h1><i class="fas fa-home"></i>{{ 'category.list'|trans }}</h1>
+    <div class="container-fluid">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>{{ 'field.id'|trans }}</th>
+                <th>{{ 'field.title'|trans }}</th>
+                <th>{{ 'field.action'|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for category in categories %}
+            <tr>
+                <td>{{ category.id }}</td>
+                <td><a href="{{ path('category_load', {'id': category.id}) }}">{{ category.title }}</a></td>
+                <td>
+                    <a href="{{ path('category_show', {'id': category.id}) }}" class="btn btn-tableau centered btn-lg shadow-sm"><i class="fas fa-angle-right"></i>{{ 'base.show'|trans }}</a>
+                    <a href="{{ path('category_edit', {'id': category.id}) }}" class="btn btn-tableau centered btn-lg shadow-sm"><i class="fas fa-angle-right"></i>{{ 'base.update'|trans }}</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">{{ 'base.no_result'|trans }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    <a href="{{ path('category_new') }}" class="btn btn-suivant centered btn-lg shadow-sm"><i class="fas fa-angle-right"></i>{{ 'category.add'|trans }}</a>
+{% endblock %}

@@ -1,0 +1,5 @@
+<form method="post" action="{{ path('theme_delete', {'id': theme.id}) }}" onsubmit="return confirm('{{ 'base.confirm_delete'|trans }}');">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ theme.id) }}">
+    <button class="btn btn-tableau centered btn-lg shadow-sm">{{ 'base.delete'|trans }}</button>
+</form>

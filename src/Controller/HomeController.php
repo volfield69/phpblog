@@ -17,4 +17,14 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
+    /**
+     * @Route("/certification", name="certification")
+     */
+    public function certification()
+    {
+        return $this->render('home/certification.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
 }

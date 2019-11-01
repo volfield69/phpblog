@@ -1,0 +1,45 @@
+base:
+  welcome: Welcome
+  logout: Logout
+  menu: Menu
+  close: Close
+  title: PHP TRAINING
+  confirm_delete: Do you confirm the delete?
+  delete: Delete
+  save: Save
+  update: Update
+  back: Bask to the list
+  no_result: No result
+  show: Show
+
+menu:
+  home: Home
+  lesson: My lessons
+  test: My tests
+  certification: Certification
+
+field:
+  id: Id
+  title: Title
+  created_date: Created date
+  last_update: Last update
+  order: Order
+  action: Actions
+
+category:
+  list: List of category
+  update: Update the category
+  add: Add a new category
+  new: New category
+
+theme:
+  list: List of theme
+  update: Update the theme
+  add: Add a new theme
+  new: New theme
+
+lesson:
+  list: List of lesson
+  update: Update the lesson
+  add: Add a new lesson
+  new: New lesson

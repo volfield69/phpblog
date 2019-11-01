@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'lesson.add'|trans }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'lesson.add'|trans }}</h1>
+    <div class="container-fluid">
+
+        {{ include('lesson/_form.html.twig') }}
+
+    </div>
+    <a href="{{ path('lesson_index') }}" class="btn btn-suivant centered btn-lg shadow-sm"><i class="fas fa-angle-right"></i>{{ 'base.back'|trans }}</a>
+{% endblock %}

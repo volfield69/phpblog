@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ category_name(category_id()) }} &gt; {{ 'theme.list'|trans }}{% endblock %}
+
+{% block body %}
+    <h1><i class="fas fa-home"></i> {{ category_name(category_id()) }} &gt; {{ 'theme.list'|trans }} </h1>
+    <div class="container-fluid">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>{{ 'field.id'|trans }}</th>
+                <th>{{ 'field.title'|trans }}</th>
+                <th>{{ 'field.created_date'|trans }}</th>
+                <th>{{ 'field.last_update'|trans }}</th>
+                <th>{{ 'field.order'|trans }}</th>
+                <th>{{ 'field.action'|trans }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for theme in themes %}
+                <tr>
+                    <td>{{ theme.id }}</td>
+                    <td><a href="{{ path('theme_load', {'id': theme.id}) }}">{{ theme.title }}</a></td>
+                    <td>{{ theme.category.title }}</td>
+                    <td>{{ theme.updatedAt ? theme.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ theme.ordre }}</td>
+                    <td>
+                        <a href="{{ path('theme_show', {'id': theme.id}) }}" class="btn btn-tableau centered btn-lg shadow-sm"><i class="fas fa-angle-right"></i>{{ 'base.show'|trans }}</a>
+                        <a href="{{ path('theme_edit', {'id': theme.id}) }}" class="btn btn-tableau centered btn-lg shadow-sm"><i class="fas fa-angle-right"></i>{{ 'base.update'|trans }}</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="6">{{ 'base.no_result'|trans }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <a href="{{ path('theme_new') }}" class="btn btn-suivant centered btn-lg shadow-sm"><i class="fas fa-angle-right"></i>{{ 'theme.add'|trans }}</a>
+    <a href="{{ path('category_index') }}" class="btn btn-suivant centered btn-lg shadow-sm"><i class="fas fa-angle-right"></i>{{ 'base.back'|trans }}</a>
+{% endblock %}

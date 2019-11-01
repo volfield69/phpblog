@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ category_name(category_id()) }} > {{ theme_name(theme_id()) }} > {{ 'lesson.list'|trans }}{% endblock %}
+
+{% block body %}
+    <h1><i class="fas fa-home"></i> {{ category_name(category_id()) }} > {{ theme_name(theme_id()) }} > {{ 'lesson.list'|trans }}</h1>
+    <div class="container-fluid">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>{{ 'field.id'|trans }}</th>
+                <th>{{ 'field.title'|trans }}</th>
+                <th>{{ 'field.order'|trans }}</th>
+                <th>{{ 'field.action'|trans }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for lesson in lessons %}
+                <tr>
+                    <td>{{ lesson.id }}</td>
+                    <td><a href="{{ path('lesson_show', {'id': lesson.id}) }}">{{ lesson.title }}</a></td>
+                    <td>{{ lesson.ordre }}</td>
+                    <td>
+                        <a href="{{ path('lesson_show', {'id': lesson.id}) }}" class="btn btn-tableau centered btn-lg shadow-sm"><i class="fas fa-angle-right"></i>{{ 'base.show'|trans }}</a>
+                        <a href="{{ path('lesson_edit', {'id': lesson.id}) }}" class="btn btn-tableau centered btn-lg shadow-sm"><i class="fas fa-angle-right"></i>{{ 'base.update'|trans }}</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="7">{{ 'base.no_result'|trans }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <a href="{{ path('lesson_new') }}" class="btn btn-suivant centered btn-lg shadow-sm"><i class="fas fa-angle-right"></i>{{ 'lesson.add'|trans }}</a>
+    <a href="{{ path('theme_index') }}" class="btn btn-suivant centered btn-lg shadow-sm"><i class="fas fa-angle-right"></i>{{ 'base.back'|trans }}</a>
+{% endblock %}

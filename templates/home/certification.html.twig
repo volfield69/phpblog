@@ -1,0 +1,227 @@
+{% extends 'base.html.twig' %}
+{% block title %}Accueil{% endblock %}
+
+
+
+{% block body %}
+    <h1><i class="fas fa-home"></i> Bienvenue sur mon espace personnel</h1>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+
+
+                <h3>PHP and Web Security</h3>
+                <ul>
+                    <li>PHP API up to PHP 7.2 version</li>
+                    <li>Object Oriented Programming</li>
+                    <li>Namespaces</li>
+                    <li>Interfaces</li>
+                    <li>Anonymous functions and closures</li>
+                    <li>Abstract classes</li>
+                    <li>Exception and error handling</li>
+                    <li>Traits</li>
+                    <li>PHP extensions</li>
+                    <li>SPL</li>
+                    <li>Web security (XSS, CSRF, etc.)</li>
+                </ul>
+
+                <h3>HTTP</h3>
+                <ul>
+                    <li>Client / Server interaction</li>
+                    <li>Status codes</li>
+                    <li>HTTP request</li>
+                    <li>HTTP response</li>
+                    <li>HTTP methods</li>
+                    <li>Cookies</li>
+                    <li>Caching</li>
+                    <li>Content negotiation</li>
+                    <li>Language detection</li>
+                </ul>
+
+                <h3>Symfony Architecture</h3>
+                <ul>
+                    <li>Symfony Flex</li>
+                    <li>License</li>
+                    <li>Components</li>
+                    <li>Bridges</li>
+                    <li>Configuration</li>
+                    <li>Code organization</li>
+                    <li>Request handling</li>
+                    <li>Exception handling</li>
+                    <li>Event dispatcher and kernel events</li>
+                    <li>Official best practices</li>
+                    <li>Release management</li>
+                    <li>Backward compatibility promise</li>
+                    <li>Deprecations best practices</li>
+                </ul>
+
+                <h3>Standardization</h3>
+                <ul>
+                    <li>Release management and roadmap schedule</li>
+                    <li>Framework interoperability and PSRs</li>
+                    <li>Naming conventions</li>
+                    <li>Coding standards</li>
+                    <li>Third-party libraries integration</li>
+                    <li>Composer packages handling</li>
+                    <li>Development best practices</li>
+                    <li>Framework overloading</li>
+                    <li>Semantic versioning</li>
+                </ul>
+
+
+                <h3>Controllers</h3>
+                <ul>
+                    <li>Naming conventions</li>
+                    <li>The base Controller class</li>
+                    <li>The request</li>
+                    <li>The response</li>
+                    <li>The cookies</li>
+                    <li>The session</li>
+                    <li>The flash messages</li>
+                    <li>HTTP redirects</li>
+                    <li>Internal redirects</li>
+                    <li>Generate 404 pages</li>
+                    <li>File upload</li>
+                    <li>Built-in internal controllers</li>
+                </ul>
+
+                <h3>Routing</h3>
+                <ul>
+                    <li>Configuration (YAML, XML, PHP & annotations)</li>
+                    <li>Restrict URL parameters</li>
+                    <li>Set default values to URL parameters</li>
+                    <li>Generate URL parameters</li>
+                    <li>Trigger redirects</li>
+                    <li>Special internal routing attributes</li>
+                    <li>Domain name matching</li>
+                    <li>Conditional request matching</li>
+                    <li>HTTP methods matching</li>
+                    <li>User's locale guessing</li>
+                    <li>Router debugging</li>
+                </ul>
+
+                <h3>Templating with Twig</h3>
+                <ul>
+                    <li>Auto escaping</li>
+                    <li>Template inheritance</li>
+                    <li>Global variables</li>
+                    <li>Filters and functions</li>
+                    <li>Template includes</li>
+                    <li>Loops and conditions</li>
+                    <li>URLs generation</li>
+                    <li>Controller rendering</li>
+                    <li>Translations and pluralization</li>
+                    <li>String interpolation</li>
+                    <li>Assets management</li>
+                    <li>Debugging variables</li>
+                </ul>
+
+
+            </div>
+            <div class="col-6">
+
+
+                <h3>Forms</h3>
+                <ul>
+                    <li>Forms creation</li>
+                    <li>Forms handling</li>
+                    <li>Form types</li>
+                    <li>Forms rendering with Twig</li>
+                    <li>Forms theming</li>
+                    <li>CSRF protection</li>
+                    <li>Handling file upload</li>
+                    <li>Built-in form types</li>
+                    <li>Data transformers</li>
+                    <li>Form events</li>
+                    <li>Form type extensions</li>
+                </ul>
+                <h3>Data Validation</h3>
+                <ul>
+                    <li>PHP object validation</li>
+                    <li>Built-in validation constraints</li>
+                    <li>Validation scopes</li>
+                    <li>Validation groups</li>
+                    <li>Group sequence</li>
+                    <li>Custom callback validators</li>
+                    <li>Violations builder</li>
+                </ul>
+                <h3>Dependency Injection</h3>
+                <ul>
+                    <li>Service container</li>
+                    <li>Built-in services</li>
+                    <li>Configuration parameters</li>
+                    <li>Services registration</li>
+                    <li>Tags</li>
+                    <li>Semantic configuration</li>
+                    <li>Factories</li>
+                    <li>Compiler passes</li>
+                    <li>Services autowiring</li>
+                </ul>
+                <h3>Security</h3>
+                <ul>
+                    <li>Authentication</li>
+                    <li>Authorization</li>
+                    <li>Configuration</li>
+                    <li>Providers</li>
+                    <li>Firewalls</li>
+                    <li>Users</li>
+                    <li>Passwords encoders</li>
+                    <li>Roles</li>
+                    <li>Access Control Rules</li>
+                    <li>Guard authenticators</li>
+                    <li>Voters and voting strategies</li>
+                </ul>
+                <h3>HTTP Caching</h3>
+                <ul>
+                    <li>Cache types (browser, proxies and reverse-proxies)</li>
+                    <li>Expiration (Expires, Cache-Control)</li>
+                    <li>Validation (ETag, Last-Modified)</li>
+                    <li>Client side caching</li>
+                    <li>Server side caching</li>
+                    <li>Edge Side Includes</li>
+                </ul>
+                <h3>Console</h3>
+                <ul>
+                    <li>Built-in commands</li>
+                    <li>Custom commands</li>
+                    <li>Configuration</li>
+                    <li>Options and arguments</li>
+                    <li>Input and Output objects</li>
+                    <li>Built-in helpers</li>
+                    <li>Console events</li>
+                    <li>Verbosity levels</li>
+                </ul>
+                <h3>Automated Tests</h3>
+                <ul>
+                    <li>Unit tests with PHPUnit</li>
+                    <li>Functional tests with PHPUnit</li>
+                    <li>Client object</li>
+                    <li>Crawler object</li>
+                    <li>Profile object</li>
+                    <li>Framework objects access</li>
+                    <li>Client configuration</li>
+                    <li>Request and response objects introspection</li>
+                    <li>PHPUnit bridge</li>
+                    <li>Handling legacy deprecated code</li>
+                </ul>
+                <h3>Miscellaneous</h3>
+                <ul>
+                    <li>Error handling</li>
+                    <li>Code debugging</li>
+                    <li>Deployment best practices</li>
+                    <li>Process and Serializer components</li>
+                    <li>Data collectors</li>
+                    <li>Web Profiler and Web Debug Toolbar</li>
+                    <li>Internationalization and localization</li>
+                </ul>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+{% endblock %}

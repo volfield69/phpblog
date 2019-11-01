@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ lesson.title }}{% endblock %}
+
+{% block body %}
+    <h1><i class="fas fa-home"></i> {{ lesson.title }}</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                {{ lesson.content|markdown }}
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-2"><a href="{{ path('lesson_edit', {'id': lesson.id}) }}" class="btn btn-tableau centered btn-lg shadow-sm"><i class="fas fa-angle-right"></i>{{ 'base.update'|trans }}</a></div>
+            <div class="col-2 ">{{ include('lesson/_delete_form.html.twig') }}</div>
+        </div>
+        <div class="row">
+            <div class="col-4">&nbsp;</div>
+        </div>
+    </div>
+    <a href="{{ path('lesson_index') }}" class="btn btn-suivant centered btn-lg shadow-sm"><i
+                class="fas fa-angle-right"></i>{{ 'base.back'|trans }}</a>
+{% endblock %}

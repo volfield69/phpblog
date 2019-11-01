@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'theme.add'|trans }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'theme.add'|trans }}</h1>
+    <div class="container-fluid">
+
+        {{ include('theme/_form.html.twig') }}
+
+     </div>
+    <a href="{{ path('theme_index') }}" class="btn btn-suivant centered btn-lg shadow-sm"><i class="fas fa-angle-right"></i>{{ 'base.back'|trans }}</a>
+{% endblock %}

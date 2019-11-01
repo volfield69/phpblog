@@ -17,23 +17,6 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
-#        main:
-#            anonymous: true
-#            pattern: ^/
-#            provider: app_user_provider
-#            guard:
-#                authenticators:
-#                    - App\Security\LoginFormAuthenticator
-#            user_checker: App\Security\UserChecker
-#            logout:
-#                path: app_logout
-#                target: /login
-#            remember_me:
-#                secret:   '%kernel.secret%'
-#                lifetime: 2592000 # 1 month in seconds
-#                path:     /
-#            access_denied_handler: App\Security\AccessDeniedHandler
-
         main:
             anonymous: true
             pattern: ^/

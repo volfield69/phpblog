@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>PHP BLOG - {% block title %}{% endblock %}</title>
+    <title>{{ 'base.title'|trans }} - {% block title %}{% endblock %}</title>
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('build/img/front/favicon/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{asset('build/img/front/favicon/favicon-32x32.png')}}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('build/img/front/favicon/favicon-16x16.png')}}">
@@ -14,13 +14,13 @@
 </head>
 <body>
 <nav class="top-bar navbar navbar-light shadow-sm">
-    <p class="emprunteur">Bienvenue {#app.user.fullName#}</p>
+    <p class="emprunteur">{{ 'base.welcome'|trans }}</p>
     <a href="{{ path('app_logout') }}" class="btn btn-logout">
-        <i class="fas fa-sign-out-alt"></i>Se déconnecter</a>
+        <i class="fas fa-sign-out-alt"></i>{{ 'base.logout'|trans }}</a>
 </nav>
 <div class="container-fluid">
     <div class="row">
-        <div class="left-clmn col-sm-3">
+        <div class="left-clmn col-sm-2">
             <div class="container-fluid">
                 <div class="logo">
                     <a href="">
@@ -28,17 +28,17 @@
                     </a>
                 </div>
 
-                <div class="switch-contrat">Menu</div>
+                <div class="switch-contrat">{{ 'base.menu'|trans }}</div>
 
                 <nav class="nav flex-column">
-                    <a class="nav-link {{ activeMenu(['front_dashboard']) }}" href=""><i class="fas fa-home"></i>Accueil</a>
-                    <a class="nav-link {{ activeMenu(['front_information_index', 'front_information_update_email', 'front_information_update_password']) }}" href=""><i class="fas fa-user"></i>Mes cours</a>
-                    <a class="nav-link" href="#"><i class="far fa-paper-plane"></i>Mes questionnaires</a>
-                    <a class="nav-link {{ activeMenu(['aide_list']) }}" href=""><i class="far fa-comments"></i>Aide</a>
+                    <a class="nav-link " href="{{ path('home') }}"><i class="fas fa-home"></i>{{ 'menu.home'|trans }}</a>
+                    <a class="nav-link " href="{{ path('category_index') }}"><i class="fas fa-user"></i>{{ 'menu.lesson'|trans }}</a>
+                    <a class="nav-link" href="#"><i class="far fa-paper-plane"></i>{{ 'menu.test'|trans }}</a>
+                    <a class="nav-link " href="{{ path('certification') }}" ><i class="far fa-comments"></i>{{ 'menu.certification'|trans }}</a>
                 </nav>
             </div>
         </div>
-        <div class="right-clmn col-sm-9">
+        <div class="right-clmn col-sm-10">
             {# read and display all flash messages #}
             {% for label, messages in app.flashes %}
                 {% for message in messages %}
@@ -46,7 +46,7 @@
                         <div class="alert alert-{{ label }} alert-dismissible shadow-sm">
                             <div class="body">
                                 {{ message|raw }}
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Fermer">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="{{ 'base.close'|trans }}">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
@@ -60,7 +60,7 @@
     </div>
 </div>
 <footer>
-    <p>PHP BLOG</p>
+    <p>{{ 'base.title'|trans }}</p>
 </footer>
 {{ encore_entry_script_tags('app') }}
 {% block javascripts %}{% endblock %}

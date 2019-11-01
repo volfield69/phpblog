@@ -153,6 +153,12 @@
     "jean85/pretty-package-versions": {
         "version": "1.2"
     },
+    "knplabs/knp-markdown-bundle": {
+        "version": "1.7.1"
+    },
+    "michelf/php-markdown": {
+        "version": "1.8.0"
+    },
     "monolog/monolog": {
         "version": "1.25.1"
     },

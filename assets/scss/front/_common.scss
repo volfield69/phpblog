@@ -138,13 +138,25 @@ footer {
 
   h2 {
     color: $blue;
-    font-size: 1.3rem;
-    letter-spacing: 0.1px;
-    font-weight: 600;
-    margin-bottom: 1.7rem;
-    text-decoration: underline;
+    font-size: 1.75rem;
+    //letter-spacing: 0.1px;
+    //font-weight: 600;
+    //margin-bottom: 1.7rem;
+    //text-decoration: underline;
   }
 
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  code{
+    background-color: black;
+    color: white;
+    display: inline-block;
+    padding: 5px;
+
+
+  }
   .etape-homepage {
     text-align: center;
 

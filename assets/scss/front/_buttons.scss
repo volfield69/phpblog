@@ -2,6 +2,47 @@
   border-radius: 2px !important;
 }
 
+
+.btn-tableau {
+  background-color: $blue;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+  margin: 0rem 0rem;
+  border-radius: 2px;
+
+  &:hover {
+    background-color: darken($blue, 10);
+    color: $white;
+  }
+
+  &.right {
+    margin-right: 30px;
+  }
+}
+
+.btn-form {
+  background-color: $blue;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+  margin: 0rem 0rem;
+  border-radius: 2px;
+
+  &:hover {
+    background-color: darken($blue, 10);
+    color: $white;
+  }
+
+  &.right {
+    margin-right: 30px;
+  }
+}
+
 .btn-rounded {
   padding: .75rem 4rem !important;
   border-radius: 30px !important;

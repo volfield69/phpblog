@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ category_name(category_id()) }} > {{ 'theme.update'|trans }} > {{ theme_name(theme.id) }}{% endblock %}
+
+{% block body %}
+    <h1>{{ category_name(category_id()) }} > {{ 'theme.update'|trans }} > {{ theme_name(theme.id) }}</h1>
+    <div class="container-fluid">
+
+        {{ include('theme/_form.html.twig') }}
+
+    </div>
+    <a href="{{ path('theme_index') }}" class="btn btn-suivant centered btn-lg shadow-sm"><i class="fas fa-angle-right"></i>{{ 'base.back'|trans }}</a>
+{% endblock %}

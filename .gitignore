@@ -30,3 +30,8 @@ docker-compose-dev.yml
 /.php_cs
 /.php_cs.cache
 ###< friendsofphp/php-cs-fixer ###
+
+###> Docker ###
+docker/volume/log.d/apache2/*
+###< Docker ###
+
